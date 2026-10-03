@@ -1,0 +1,22 @@
+server:
+  port: 9056
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: user-service
+              uri: lb://userservice
+              predicates:
+                - Path=/cliente/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9099/eureka
+  instance:
+    prefer-ip-address: true

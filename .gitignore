@@ -1,0 +1,20 @@
+# Maven
+target/
+
+# Logs y crashes de la JVM
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+# SO
+.DS_Store
+Thumbs.db
